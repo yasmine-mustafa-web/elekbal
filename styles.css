@@ -188,6 +188,8 @@ width: 50%;
     color: #fff;
 }
 @media (max-width:768px) {
+    .hero h1{
+  font-size:19px;}
     .heroTwo{
         display: flex;
         flex-direction: column;
