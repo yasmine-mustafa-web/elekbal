@@ -31,7 +31,7 @@ if(itlContainer) itlContainer.innerHTML="";
 if(gerContainer) gerContainer.innerHTML="";
 if(relContainer) relContainer.innerHTML="";
 if(PSContainer) PSContainer.innerHTML="";
-if(GEContainer) GEContainer.innerHTML="",
+if(GEContainer) GEContainer.innerHTML="";
         
         function createCard(item, targetContainer) {
             if (!targetContainer) return; 
