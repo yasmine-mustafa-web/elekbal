@@ -47,8 +47,6 @@ if(GEContainer) GEContainer.innerHTML="",
             `;
             targetContainer.appendChild(card);
         }
-
-aa
         allData.forEach(item => {
             if (item.subj === "History") {
                 createCard(item, historyContainer);
