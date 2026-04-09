@@ -178,7 +178,7 @@ width: 50%;
     background-color: #fff;
     border: 2px solid var(--main);
     border-radius: 30px;
-    width: 80%;
+    width: 100%;
     color: var(--main);
     margin-bottom: 10px;
 }
