@@ -1,6 +1,5 @@
 fetch('app.json')
     .then(response => {
-        // Check if the fetch was successful
         if (!response.ok) throw new Error('Network response was not ok');
         return response.json();
     })
@@ -19,7 +18,7 @@ fetch('app.json')
                          const PSContainer = document.getElementById("data-listPS");
 const GEContainer=document.getElementById("data-listGE");
 
-        // Clear containers safely
+        
         if (historyContainer) historyContainer.innerHTML = "";
         if (arabicContainer) arabicContainer.innerHTML = "";
         if (englishContainer) englishContainer.innerHTML = "";
@@ -33,9 +32,9 @@ if(gerContainer) gerContainer.innerHTML="";
 if(relContainer) relContainer.innerHTML="";
 if(PSContainer) PSContainer.innerHTML="";
 if(GEContainer) GEContainer.innerHTML="",
-        // Reusable function to create and append cards
+        
         function createCard(item, targetContainer) {
-            if (!targetContainer) return; // Guard clause
+            if (!targetContainer) return; 
 
             const card = document.createElement("div");
             card.className = "card";
@@ -49,7 +48,7 @@ if(GEContainer) GEContainer.innerHTML="",
             targetContainer.appendChild(card);
         }
 
-        // Filter and Render
+aa
         allData.forEach(item => {
             if (item.subj === "History") {
                 createCard(item, historyContainer);
