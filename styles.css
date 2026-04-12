@@ -15,6 +15,21 @@ body{
     width: 60px;
     height: 60px;
 }
+.btnnav{
+    border-radius: 16px;
+    border: 1px solid var(--main);
+    background-color: #fff;
+    margin: 0px 10px;
+    padding: 4px 9px;
+    font-size: 14px;
+    font-family: "Poppins" ,sans-serif;
+    text-decoration: none;
+}
+.btnnav:hover{
+    border: none;
+    background-color: var(--main);
+    color: #fff;
+}
 .hero{
     height: 500px;
     width: 100%;
@@ -40,7 +55,9 @@ z-index: 1;
     font-weight: 900;
     justify-content: center;
  z-index: 2;
- margin: 0;
+ margin-bottom: 0;
+ margin-top: -80px;
+
  -webkit-text-stroke: 1px var(--main);
     font-size: 60px;
     font-family: "Montserrat" ,sans-serif;
@@ -55,7 +72,7 @@ z-index: 1;
     padding: 9px;
     margin: 0;
     color: var(--font-color);
-    border-radius: 10px;
+    border-radius: 20px;
     font-family: "poppins" ,sans-serif;
     box-shadow: 0px 10px 30px rgba(0,0,0,0.9);
     background-color: transparent;
@@ -72,8 +89,9 @@ button:hover{
 .hero-btn{
     z-index: 2;
     margin-top: 20px;
-    background: #ffffff8a;
-    border-radius: 10px;
+    border-radius: 20px;
+        background-color: #d3d2d2;
+
     border: 2px solid var(--main);
     padding: 5px 15px ;
     font-weight: 500;
@@ -89,7 +107,7 @@ button:hover{
     display: flex;
     gap: 100px;
     align-items: center;
-
+margin: 70px 0px;
 }
 .heroLeft{
 width: 50%;
@@ -100,6 +118,7 @@ width: 50%;
     margin-top: 30px;
     flex-wrap: wrap;
     font-family: "poppins", sans-serif;
+
 }
 .heroRight img{
     border-radius: 50%;
@@ -110,7 +129,7 @@ width: 50%;
     border: 1px solid var(--main);
 }
 .slider{
-    margin: 50px 0px;
+    margin: 120px 0px;
     width: 100%;
     overflow: hidden;
     background-color: #fff;
@@ -168,10 +187,10 @@ width: 50%;
 }
 .buttons{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 80px;
     flex-wrap: wrap;
-
+gap: 10px;
 }
 .btntwo{
     padding: 15px;
@@ -187,9 +206,114 @@ width: 50%;
     border: none;
     color: #fff;
 }
+    .booklet2 button{
+        border-radius: 20px;
+        padding: 3px 9px;
+        margin-bottom: 19px;
+        font-size: 15px;
+        border: 1px solid var(--main);
+    }
+       .booklet2{
+      padding: 50px;
+      font-family: "Poppins" ,sans-serif;
+      border-radius: 30px;
+      box-shadow: 0px 5px 9px rgba(0,0,0,0.1);
+      margin: 50px;
+      border: 1px solid var(--main);
+    }
+    .booklet2 h5{
+        font-size: 30px;
+-webkit-text-stroke: var(--main) 0.3px;
+    }
+    hr{
+        background-color: var(--main);
+    }
+    .bi.bi-person-circle{
+        font-size: 100px;
+    }
+    .sign{
+        text-align: center;
+       margin: 0;
+       width: 100%;
+       min-height: 100vh;
+       display: flex;
+        background-color: rgb(33, 33, 134);
+    }
+    .sign p{
+        font-family: "poppins";
+        margin: 10px;
+    }
+    .signform{
+     display: flex;
+     flex-direction: column;
+        padding: 18px;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+        gap: 10px;
+
+    }
+    .signform input{
+        border-radius: 30px;
+        padding: 8px 5px;
+        width: 290px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 5px auto;
+        direction: ltr;
+        text-align: left;
+border: 1px solid var(--main);
+    }
+    .signform select{
+        width: 100px;
+        margin: 0 auto;
+        cursor: pointer;
+        border-radius: 20px;
+        padding: 5px;
+        border: 1px solid var(--main);
+    }
+    .signform button{
+        width: 190px;
+        margin: 0 auto;
+        border: 1px solid var(--main);
+        border-radius: 20px;
+    }
+    .signpar{
+background: rgb(255, 255, 255);
+padding: 10px;
+margin: 40px auto;
+border-radius: 20px;
+box-shadow: 0px 10px 15px rgba(0,0,0,0.9);
+
+    }
+    .signform label{
+margin-bottom: -10px;
+padding-bottom: 0;
+text-align: left;
+margin-left: 10px;
+font-family: "montserrat";
+    }
+    .lastform{
+        display: flex;
+        text-align: center;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+    }
 @media (max-width:768px) {
     .hero h1{
-  font-size:19px;}
+  font-size:35px;
+}
+  .hero p{
+    font-size: 11px;
+    color: #000000;
+  }
+  .hero-btn{
+    padding:4px  7px;
+    width: fit-content;
+    font-size: 14px;
+  }
     .heroTwo{
         display: flex;
         flex-direction: column;
@@ -199,13 +323,48 @@ width: 50%;
                 width: 100%;
                 padding: 20px;
                 margin-top: 0px;
-
+order: 2;
     }
-    .heroRight p{
-        order:1;
+    .heroLeft p{
+        order:2;
+
+    font-size: 12.5px;
     }
     .heroRight img{
-        order: 2;
-        display: none;
+width: 185px;
+height: 185px;
     }
+    .heroRight {
+        order: 1;
+        margin-top: 20px;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .btntwo{
+        padding: 10px;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+ 
+    .booklet2 h5{
+        font-size: 26px;
+    }
+.booklet2 button{
+    font-size: 12px;
+}
+.booklet2{
+          margin: 28px;
+
+}
+.btnnav{
+    margin: 0;
+}
+.signpar{
+    margin: 40px  auto;
+width: 85%;
+}
 }
