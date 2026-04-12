@@ -1,6 +1,4 @@
-*{
-    max-width: 100%;
-}
+
 body{
     --font-color:#000;
     --bg-color:#fff;
@@ -266,17 +264,20 @@ gap: 10px;
 border: 1px solid var(--main);
     }
     .signform select{
-        width: 100px;
+        width: 110px;
         margin: 0 auto;
         cursor: pointer;
         border-radius: 20px;
-        padding: 5px;
+        padding: 5px 1px;
         border: 1px solid var(--main);
     }
     .signform button{
-        width: 190px;
-        margin: 0 auto;
-        border: 1px solid var(--main);
+        width: 130px;
+        margin: 10px auto;
+      background-color: var(--main);
+      color: #fff;
+      border: none;
+      padding: 6px 0px;
         border-radius: 20px;
     }
     .signpar{
@@ -301,6 +302,57 @@ font-family: "montserrat";
         align-items: center;
         justify-content: center;
     }
+    .log{
+        text-align: center;
+        align-items: center;
+        background-color: rgb(33, 33, 134);
+        display: flex;
+        min-height: 100vh;
+
+    }
+    .logpar{
+        background-color: #fff;
+        margin: 40px auto;
+        border-radius: 30px;
+        padding: 20px;
+display: flex;
+flex-direction: column;
+border: 1px solid var(--main);
+    }
+    .logpar input{
+        margin: 8px auto;
+        padding: 5px 10px;
+        border-radius: 20px;
+        border: 1px solid var(--main);
+        width: 290px
+
+    }
+    .logpar button{
+  
+        width: 160px;
+        border-radius: 20px;
+        border: 1px solid var(--main);
+        background-color: var(--main);
+        margin: 10px auto;
+        color: #fff;
+        padding: 2px 0px;
+    }
+    .logpar form{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .logpar p{
+        font-family: "poppins";
+    }
+    .logpar label{
+        direction: ltr;
+        text-align: left;
+        margin-left: 5px;
+        margin-bottom: -8px;
+        font-family: "Montserrat";
+    }
+
 @media (max-width:768px) {
     .hero h1{
   font-size:35px;
@@ -366,5 +418,30 @@ height: 185px;
 .signpar{
     margin: 40px  auto;
 width: 85%;
+}
+.signpar input{
+    width: fit-content;
+
+}
+.signpar label{
+text-align: center;
+}
+.log{
+    display: flex;
+
+}
+.logpar{
+    width: 85%;
+    margin: 40px auto;
+}
+.logpar input{
+width: fit-content;
+
+}
+.logpar label{
+    text-align: center;
+}
+.lastform p , .lastform a{
+font-size: 14px;
 }
 }
