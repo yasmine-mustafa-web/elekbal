@@ -1,3 +1,6 @@
+*{
+    scroll-behavior: smooth;
+}
 
 body{
     --font-color:#000;
@@ -170,8 +173,8 @@ hr{
     text-align: center;
     text-decoration: none;
 }
-.academic h2{
-    margin-bottom: 50px;
+.academic h1{
+    margin-bottom: 0px;
     text-align: center;
     font-family: "Marmelad";
 }
@@ -181,13 +184,14 @@ hr{
     gap: 50px;
 }
 .card{
+    margin-top: 30px;
     align-items: center;
     text-decoration: none;
     gap: 10px;
 border: 1px solid rgba(255, 255, 255, 0.5) !important;
 background: rgba(255, 255, 255, 0.09) !important;
 backdrop-filter: blur(20px) !important;
-box-shadow: 0 5px 15px rgba(214, 114, 218, 0.5) !important;
+box-shadow: 0 5px 10px rgb(90, 148, 224)!important;
 border-radius: 20px !important;
 transition: all 0.3s ease;
 }
@@ -197,7 +201,7 @@ transition: all 0.3s ease;
 }
 .bi.bi-patch-check ,.bi.bi-book , .bi.bi-file-earmark-arrow-down{
     font-size: 50px;
-    background:linear-gradient(to bottom ,rgb(30, 191, 255),violet) !important;
+    background:linear-gradient(to bottom ,rgb(30, 191, 255),rgb(228, 53, 228)) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
 -webkit-text-fill-color: transparent !important;
@@ -357,24 +361,31 @@ width: 50%;
     text-align: center;
     border: 2px solid var(--main);
 }
-.buttons{
+
+.btnscontainer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 80px;
+    padding: 10px;
     flex-wrap: wrap;
 gap: 10px;
 }
 .btntwo{
-    padding: 15px;
-    background-color: #fff;
-    border: 2px solid var(--main);
-    border-radius: 30px;
-    width: 100%;
+    padding: 12px;
+    background-color: #ebebeb;
+    border: 2px solid rgb(30, 191, 255);
+    border-radius: 40px;
+    width: 280px;
     color: var(--main);
     margin-bottom: 10px;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: "Montserrat";
+    display: flex;
+    font-size: 19px;
+    flex-direction: column;
 }
 .btntwo:hover{
-        background-color: var(--main);
+        background-color: rgb(30, 191, 255);
     border: none;
     color: #fff;
 }
@@ -531,16 +542,18 @@ border: 1px solid var(--main);
     text-align: center;
     align-items: center;
     margin: 0 auto;
-
 }
 .results p{
     text-align: left;
     text-decoration: none;
+
 }
 .results form{
     display: flex;
     flex-direction: column;
 margin: 0 auto;
+transform: translateY(50%);
+
 }
 .results input{
     width: 300px;
@@ -558,16 +571,59 @@ padding: 2px 9px;
 .results label{
     font-family: "Montserrat";
     font-size: 20px;
+    
 }
-.booklet{
+.booklet , .results ,.buttons{
     justify-content: center;
+
+    z-index: 1;
+  overflow: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+.booklet::before ,.results::before ,.buttons::before{
+    content: "";
+    position: absolute;
+        background: url(./assets/ekbal.jpg);
+    background-position: center;
+    filter: blur(5px);
+    background-size: cover;
+
+  
+    z-index: -1;
+    transform: scale(1.1);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.booklet h1{
+    text-align: center;
+font-family: "Montserrat";
+z-index: 9000;
+position: relative;
+}
+.hzLine{
+    height: 1px;
+    width: 90px;
+    position: relative;
+    background-color: #000;
+    text-align: center;
+    align-items: center;
+    margin: 19px auto;
+    margin-bottom: 25px;
+    z-index: 900000;
 }
 .bookletcontainer{
     display: flex;
     justify-content: center;
     gap: 20px;
-    transform: translateY(50%);
+  
+margin-top: 20px;
 
+}
+.card h5{
+    color: #000;
 }
 .exs{
     text-align: left;
@@ -576,19 +632,27 @@ padding: 2px 9px;
 }
 @media (max-width:768px) {
     .vclinehero{
-        left: 10px;
+        left: 23px;
+        height: 130px;
+transform: translateY(370px);
     }
     .hero h1{
   font-size:35px;
+  margin-top: 43px;
 }
   .hero p{
-    margin-top: 6px;
+    margin-top: 35px;
     font-size: 19px;
     color: #fff;
   }
-  .hero h2{
-
+  .hero h3{
+    margin-top: 33px;
   }
+.hero h2{
+    font-size: 17px;
+    white-space: nowrap;
+    margin-top: 40px;
+}
   .hero-btn{
     padding:4px  7px;
     width: fit-content;
@@ -618,7 +682,28 @@ height: 185px;
         order: 1;
         margin-top: 20px;
     }
-    .buttons{
+    .imgcontainer{
+        width: 230px;
+      
+    }
+    .imgcontainer img{
+        width: 100%;
+        height: auto;
+    }
+    .imgcontainer p{
+        font-size: 18px;
+    }
+    .academiccontaianer{
+        flex-wrap: wrap;
+    }
+    .bookletcontainer{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        margin-top: 40px;
+        transform: translateY(0);
+    }
+    .btnscontainer{
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -628,6 +713,8 @@ height: 185px;
       justify-content: center;
       text-align: center;
       align-items: center;
+      max-width: 200px;
+      margin-bottom: 10px;
     }
  
     .booklet2 h5{
